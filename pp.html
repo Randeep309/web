@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Randeep Raj | Portfolio</title>
+<style>
+/* ------------------- BASE STYLE ------------------- */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+  background: linear-gradient(135deg, #000000, #111122, #050505);
+  color: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+header {
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  z-index: 1000;
+}
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.7rem;
+  color: #00ffff;
+  letter-spacing: 2px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+nav a:hover, nav a.active {
+  color: #00ffff;
+}
+
+/* ------------------- SECTIONS ------------------- */
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hero {
+  background: linear-gradient(160deg, #000, #111, #001122);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+.hero h2 {
+  font-size: 2.8rem;
+}
+.hero h2 span {
+  color: #00ffff;
+}
+.hero p {
+  color: #bbb;
+  max-width: 500px;
+  margin: 15px auto;
+  line-height: 1.6;
+}
+
+/* ------------------- ABOUT ------------------- */
+.about {
+  background: linear-gradient(160deg, #050505, #0b0b0b, #1a1a1a);
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+}
+.about h3 {
+  font-size: 2.3rem;
+  color: #00ffff;
+  margin-bottom: 20px;
+}
+.about p {
+  max-width: 700px;
+  line-height: 1.7;
+  color: #ccc;
+}
+
+/* ------------------- PROJECTS ------------------- */
+.projects {
+  background: linear-gradient(160deg, #010101, #151515, #050505);
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+}
+.projects h3 {
+  color: #00ffff;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.project {
+  background: #1a1a1a;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #00ffff55;
+}
+.project img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.project h4 {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+/* ------------------- CONTACT ------------------- */
+.contact {
+  background: linear-gradient(160deg, #000, #0a0a0a, #020202);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+.contact h3 {
+  color: #00ffff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.contact p {
+  color: #bbb;
+  margin-bottom: 25px;
+}
+.contact button {
+  background: #00ffff;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contact button:hover {
+  background: #00cccc;
+}
+
+/* ------------------- FOOTER ------------------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  background: #000;
+  font-size: 0.9rem;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+@media(max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  .hero h2 { font-size: 2rem; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>Randeep Raj</h1>
+  <nav>
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <h2>Hi, I'm <span>Randeep Raj</span></h2>
+  <p>A web developer who blends minimal design with immersive dark themes.</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <h3>About Me</h3>
+  <p>I’m passionate about building clean, modern interfaces with motion and elegance. I enjoy experimenting with color gradients, smooth animations, and typography that tell a visual story.</p>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+  <h3>My Projects</h3>
+  <div class="project-grid">
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1581276879432-15e50529f34b?auto=format&fit=crop&w=800&q=80" alt="Project1">
+      <h4>Personal Portfolio</h4>
+    </div>
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Project2">
+      <h4>Business Landing Page</h4>
+    </div>
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80" alt="Project3">
+      <h4>Creative Blog UI</h4>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h3>Let's Connect</h3>
+  <p>Want to collaborate or just say hello? I’d love to hear from you.</p>
+  <button onclick="alert('Thanks for reaching out! 😊')">Contact Me</button>
+</section>
+
+<footer>© 2025 Randeep Raj | Designed with 💻 & passion</footer>
+
+<script>
+// Scroll animation - reveal sections
+const sections = document.querySelectorAll('section');
+const revealOnScroll = () => {
+  const trigger = window.innerHeight / 1.3;
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top < trigger) sec.classList.add('visible');
+  });
+};
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+
+// Nav active state
+const navLinks = document.querySelectorAll('nav a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(sec => {
+    const secTop = sec.offsetTop - 80;
+    if (pageYOffset >= secTop) current = sec.getAttribute('id');
+  });
+  navLinks.forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href').includes(current)) a.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>  
